@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Login</title>
+</head>
+<body>
+
+    <!----------------------- Main Container -------------------------->
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+
+    
+
+
+    <!----------------------- Login Container -------------------------->
+    <div class="row border rounded-5 p-3 bg-white shadow box-area">
+
+    
+
+
+    <!--------------------------- Left Box ----------------------------->
+    <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #ea9e1e;">
+        <div class="featured-image mb-3">
+            <img src="images/login-img/3.jpg" class="img-fluid" style="width: 300px;">
+        </div>
+        <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace;font-weight: 600;">Welcome Back!</p>
+        
+    </div>
+
+
+    <!-------------------- ------ Right Box ---------------------------->
+    <div class="col-md-6 right-box">
+        <div class="row align-items-center">
+            <div class="header-text mb-4">
+                <h3 style="font-family: 'Courier New', Courier, monospace;font-weight: 600;">Create Account</h3>
+            </div>
+            <div class="input-group mb-3">
+                <button class="btn btn-lg btn-light w-100 fs-6"><img src="images/login-img/google.png" style="width:20px;" class="me-2"><small>Sign Up With Google</small></button>
+            </div>
+            <div class="col-md-9 mx-auto mb-4 text-sm">
+                <small style="font-family: 'Courier New', Courier, monospace;">or use your email for registration</small>
+            </div>
+            <form id="loginForm">
+                <div class="form-group mb-3">
+                    <input type="username" class="form-control form-control-lg bg-light fs-6" id="username" placeholder="Username">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="email" class="form-control form-control-lg bg-light fs-6" id="email" placeholder="Email address">
+                </div>
+                <div class="form-group mb-3">
+                    <input type="password" class="form-control form-control-lg bg-light fs-6" id="password" placeholder="Password">
+                </div>
+        
+            <div class="input-group mb-3">
+                <button class="btn btn-lg btn-warning w-100 fs-6" type="submit" id="submit">Sign Up</button>
+            </div>
+            </form>
+        
+
+        <div class="row">
+            <small>You have account? <a href="login.html">Sign in</a></small>
+        </div>
+
+        </div>
+    </div>    
+
+
+    </div> 
+</div>
+<script>
+    $(document).ready(function(){
+    $("#loginForm").submit(function(event){
+        event.preventDefault(); 
+
+        // Lấy dữ liệu từ các trường input
+        var username = $("#username").val();
+        var email = $("#email").val();
+        var password = $("#password").val();
+
+        // Kiểm tra dữ liệu
+        if(username.trim() === "") {
+            alert("Vui lòng nhập tên người dùng");
+            return;
+        }
+        if(email.trim() === "") {
+            alert("Vui lòng nhập địa chỉ email");
+            return;
+        }
+
+        if(password.trim() === "") {
+            alert("Vui lòng nhập mật khẩu");
+            return;
+        }
+
+        // Nếu dữ liệu hợp lệ, có thể gửi form hoặc thực hiện các hành động khác ở đây
+        // Trong trường hợp này, chúng ta chỉ hiển thị thông báo cho mục đích minh họa
+        alert("Tạo tài khoản thành công!\nUsername: "+username +"\nEmail: " + email);
+    });
+});
+</script>
+
+
+</body>
+</html>
