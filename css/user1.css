@@ -74,7 +74,10 @@ input{
 .hot-product{
     height:auto;
 }
-
+.category a{
+    text-decoration: none;
+    color:black;
+}
 .img-product{
     flex:1;
 }
@@ -98,4 +101,32 @@ input{
 }
 .products{
     flex:3;
+}
+.customer-detail input{
+    margin-bottom:10px;
+}
+.customer-detail select{
+    border-radius:5px;
+}
+
+.product-detail-img{
+    flex:1;
+}
+.product-detail-intro{
+    flex:1;
+    
+    
+}
+#cart a{
+    text-decoration: none;
+}
+/*
+.product-intro {
+    flex:1;
+}
+.cost-product{
+    flex:1;
+}
+.function{
+    flex:1;
 }

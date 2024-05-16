@@ -7,17 +7,16 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
         <link rel="stylesheet" href="css/user-responsive.css">
         <link rel="stylesheet" href="css/user1.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
 <body>
    <!--Header -->
    <div class="header container-fluid mb-3">
-    <div class="row bg-secondary py-2 px-lg-5">
-        <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
-            <div class="d-inline-flex align-items-center">
+    <div class="row bg-secondary d-flex py-2 px-lg-5">
+        <div class="col-lg-6 d-flex justify-content-start align-items-left text-lg-left mb-2 mb-lg-0">
+            <div class="d-inline-flex justify-content-start">
                 <a class="text-white pr-3" href="">FAQs</a>
                 <span class="text-white">|</span>
                 <a class="text-white px-3" href="">Help</a>
@@ -108,27 +107,142 @@
         <i class="fa-solid fa-heart"></i>
 
     </div>
-    <div class="container mt-3">
-        <table class="cart text-center" style="width:90%">
-            <thead>
-                <tr>
-                    <td id="stt">STT</td>
-                    <td id="name">Tên</td>
-                    <td id="count">Số lượng</td>
-                    <td id="cost">Giá tiền</td>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td class="cost-total" colspan="4">Tổng tiền</td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
+    <div class="container giohang mt-3" style="border:1px solid gray;border-radius: 5px">
+      
+    <div class=" cart-body mt-3 mb-3">
+        <div class="cart-product d-flex justify-content-between align-items-center">
+            <div class="product-intro d-flex">
+                <div class="product-img" style="border:1px solid black;border-radius:5px">
+                    <img style="width:100px;height:100px" src="images/product/dochoi/dc1.jpg" class="img-float img-thumbnail">
+                </div>
+                <div class="ml-3 product-detail d-flex justify-content-center align-items-center flex-wrap ">
+                   <p class="">Đồ chơi cho pet dạng bóng</p> 
+                </div>
+            </div>
+            <div class="cost-product d-flex justify-content-center align-items-center">
+                <div class="soluong">
+                    <input type="number" value="1" style="width:30%;text-align: center;">
+                </div>
+                <div class="giatien text-danger">
+                    250.000đ
+                </div>
+                
+            </div>
+            <div class="function">
+                <button type="button" class="btn btn-danger">Xóa</button>
+            </div>
         
+        </div>
+        <hr>
+        
+        
+        
+    </div>
+    <p style="text-align: right;">Total Price: <strong>250.000đ</strong></p>
+    <div id="thanhtoan" class="d-flex justify-content-end">
+        <button  class="btn btn-success mb-3">Thanh toán</button>
+    </div>
+    </div>
+    <div id="pay-form" style="display:none">
+    <div class="container mt-4 d-flex flex-column justify-content-center" id="pay-form" >
+        <div class="customer-detail" style="border:1px solid gray;border-radius:5px;padding:10px">
+           <div class="mt-3"><strong>Thông tin khách hàng</strong></div> 
+            <form class="mt-4">
+                <input id="name" type="text" class="form-control" placeholder="Họ và tên" required>
+                <input id="phonenumber" type="text" class="form-control" placeholder="Số điện thoại" required>
+                <div>
+                    <select class="form-select form-select-sm mb-3" id="city" aria-label=".form-select-sm">
+                    <option value="" selected>Chọn tỉnh thành</option>           
+                    </select>
+                              
+                    <select class="form-select form-select-sm mb-3" id="district" aria-label=".form-select-sm">
+                    <option value="" selected>Chọn quận huyện</option>
+                    </select>
+                    
+                    <select class="form-select form-select-sm" id="ward" aria-label=".form-select-sm">
+                    <option value="" selected>Chọn phường xã</option>
+                    </select>
+                     </div>   
+                     <input id="address" type="text" class="form-control" placeholder="Địa chỉ chi tiết" required>
+                     <input id="email" type="email" class="form-control" placeholder="Email" required>
+                     <p>Ghi chú (nếu có)</p>
+                     <textarea id="description" type="text" style="width:100%;resize:none">
+
+                     </textarea>
+            </form>
+        </div>
+        <div class="payment mt-5" style="border:1px solid gray;border-radius:5px;padding:10px">
+           <div class="mb-2">
+            <strong>
+                Chọn phương thức thanh toán
+            </strong>
+        </div> 
+            <div class="payment-1">
+              <input type="radio" value="payment1" name="payment" id="payment"> 
+              <label for="payment-1">Thanh toán bằng phương thức COD</label>
+              <div class="payment1-detail" style="display:none">
+              <p>
+                - Quý khách vui lòng thanh toán toàn bộ giá trị đơn hàng cho nhân viên giao hàng
+              </p>
+              <span>
+                <strong>Lưu ý: </strong>
+                <p>Trong trường hợp có bất cứ vấn đề gì về đơn hàng sau khi thanh toán quý khách vui lòng liên hệ qua bên tổng đài qua số Hotline: <strong>0912345669</strong></p>
+            </span>
+            </div>
+           </div>
+
+           <div class="payment-2">
+            <input type="radio" value="payment2" name="payment" id="payment"> 
+            <label for="payment-2">Thanh toán bằng phương thức chuyển khoản</label>
+            <div class="payment2-detail"style="display:none" >
+                <p>
+            
+              Chủ tài khoản: NGUYEN PHUONG NAM
+            
+        </p>
+        <p>Số tài khoản: 0123456789</p>
+        <p>Nội dung chuyển khoản: [Họ tên khách hàng + số điện thoại] - Vui lòng nhập thông tin đúng với thông tin đã điền ở phía trên</p>
+            <span>
+              <strong>Lưu ý: </strong>
+              <p>Trong trường hợp có bất cứ vấn đề gì về đơn hàng sau khi thanh toán quý khách vui lòng liên hệ qua bên tổng đài qua số Hotline: <strong>0912345669</strong></p>
+          </span>
+          </div>
+         </div>
+        </div>
+        
+        <!-- Button trigger modal -->
+<button type="button" style="width:15%" id="confirm-payment" class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#modalconfirmpayment">
+    Xác nhận thanh toán
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="modalconfirmpayment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Thông báo</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Bạn đã thanh toán thành công !
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Xác nhận</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+
+    </div>
+    </div> 
+    <script>
+        $(document).ready(function(){
+            $("#thanhtoan").click(function(){
+             $("#pay-form").toggle();
+    })
+        })
+    </script>   
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
         <div class="row pt-5">
@@ -154,10 +268,10 @@
                     <div class="col-md-4 mb-5">
                         <h5 class="text-primary mb-4">Newsletter</h5>
                         <form action="">
-                            <div class="form-group">
+                            <div class="form-group mb-3">
                                 <input type="text" class="form-control border-0" placeholder="Your Name" required="required" />
                             </div>
-                            <div class="form-group">
+                            <div class="form-group mb-3">
                                 <input type="email" class="form-control border-0" placeholder="Your Email" required="required" />
                             </div>
                             <div>
@@ -172,5 +286,50 @@
    
     <!-- Footer End -->
     <script src="js/script.js"></script>
+   
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script>
+	var citis = document.getElementById("city");
+var districts = document.getElementById("district");
+var wards = document.getElementById("ward");
+var Parameter = {
+  url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json", 
+  method: "GET", 
+  responseType: "application/json", 
+};
+var promise = axios(Parameter);
+promise.then(function (result) {
+  renderCity(result.data);
+});
+
+function renderCity(data) {
+  for (const x of data) {
+    citis.options[citis.options.length] = new Option(x.Name, x.Id);
+  }
+  citis.onchange = function () {
+    district.length = 1;
+    ward.length = 1;
+    if(this.value != ""){
+      const result = data.filter(n => n.Id === this.value);
+
+      for (const k of result[0].Districts) {
+        district.options[district.options.length] = new Option(k.Name, k.Id);
+      }
+    }
+  };
+  district.onchange = function () {
+    ward.length = 1;
+    const dataCity = data.filter((n) => n.Id === citis.value);
+    if (this.value != "") {
+      const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
+
+      for (const w of dataWards) {
+        wards.options[wards.options.length] = new Option(w.Name, w.Id);
+      }
+    }
+  };
+}
+	</script>
 </body>
 </html>
