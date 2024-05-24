@@ -1,5 +1,7 @@
+
 .menu{
-    background-color: #EA9E1E;
+    width:100%;
+
     font-size:medium;
     
 }
@@ -10,6 +12,7 @@
 .menu-list{
     flex:2;
 }
+
 .header2-left{
     flex:1;
 }
@@ -39,6 +42,7 @@
 /*search end*/
 .menu a:hover{
     text-decoration: none;
+    color:black;
 }
 .menu-phone{
    
@@ -119,6 +123,12 @@ input{
 }
 #cart a{
     text-decoration: none;
+}
+.contact-link{
+    flex:1;
+}
+.form-contact{
+    flex:1;
 }
 /*
 .product-intro {
