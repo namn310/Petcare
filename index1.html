@@ -11,22 +11,20 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
+  </head>
 <body>
     <!--Header -->
     <div class="header container-fluid mb-3">
-        <div class="row bg-secondary py-2 px-lg-5">
-            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-white pr-3" href="">FAQs</a>
-                    <span class="text-white">|</span>
-                    <a class="text-white px-3" href="">Help</a>
-                    <span class="text-white">|</span>
-                    <a class="text-white pl-3" href="">Support</a>
+        <div class="row bg-dark py-2 px-lg-5 ">
+            <div class="col-lg-6 text-left  mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center ">
+                    <a class="text-link text-white pr-3" href=""><i class="fa-regular fa-envelope mx-1"></i>petcare@gmail.com</a>
+                    
+                    <a class="text-white px-3" href=""><i class="fa-solid fa-phone mx-1"></i>0123456789</a>                             
                 </div>
             </div>
-            <div class="col-lg-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
+            
+                <div class="col-lg-6 text-right d-inline-flex align-items-right justify-content-end px-0">
                     <a class="text-white px-3" href="">
                         <i class="fab fa-facebook-f"></i>
                     </a>
@@ -39,36 +37,39 @@
                     <a class="text-white px-3" href="">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a class="text-white pl-3" href="">
+                    <a class="text-white px-3" href="">
                         <i class="fab fa-youtube"></i>
                     </a>
                 </div>
-            </div>
+            
         </div>
         <div class="header2 container-fluid d-flex justify-content-around align-items-center">
           <div class="header2-left d-flex align-items-center ">
             <img class="img-fluid ms-5" src="images/logo/PetCARE.png" style="width:15%;height:15%">
             <h2 class="mt-3 ms-2" style="color:#F7A98F">PetCare</h2>
         </div>
-
-            <div class="inputs d-flex align-items-center justify-content-between">
-              <span class="inputs-icon"><i class="fa fa-search"></i></span>
-              <input type="text" class="form-control" placeholder="Search Tasks...">
             
-          </div>
+              <form class="inputs d-flex align-items-center justify-content-between" role="search">
+                <input class="form-control me-2" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search">
+                <button class="btn btn-outline-danger" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
 
             <div class="header2-right d-flex justify-content-end mt-3">
-            <span class="me-4">
-               <p><strong>Email</strong> </p> 
-                <p>petcare@gmail.com</p>
-            </span>
-            <span class="mr-3">
-                <p><strong>Điện thoại</strong></p>
-                <p>0123456789</p>
-            </span>
-        </div>
+            
+            </div>
         <div class="header3 ms-4">
-          <p style="font-weight: bolder;"><a style="text-decoration: none;color:black" href="login.html">Đăng Nhập</a>/<a style="text-decoration: none;color:black" href="sign_in.html">Đăng Ký</a></p>
+          <div class="nav-item dropdown mx-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-user "></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="cart.html">Đơn Hàng</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="login.html">Đăng Xuất</a></li>
+              
+            </ul>
+          </div>
+          
         </div>
   
         </div>
@@ -109,8 +110,8 @@
  <!--header end-->
 
        
-    <div class="container mt-3 mb-3 main-img d-flex justify-content-center align-items-center">
-      <img style="max-width:90%" src="images/product/banner_collection.webp">
+    <div class="container-fluid mt-3 mb-3 main-img d-flex justify-content-center align-items-center">
+      <img style="max-width:100%" src="images/product/banner_collection.webp">
     </div>
     <!--Hot product-->
     <div class="d-flex flex-column justify-content-center align-items-center mb-3">
@@ -141,17 +142,7 @@
             </div>
           </div>
           
-          <div id="product-infor" class="card" style="width: 15rem;height:26rem">
-            <a href="product-detail.html"> <img class="card-img-top" src="images/product/dochoi/dc4.webp" alt="Card image cap"></a>
-            <div class="card-body">
-              <h5 id="name-product" class="card-title">Đồ chơi hình cá</h5>
-              <p class="card-text text-danger">150.000đ</p>
-              <!-- Button trigger modal -->
-      <button type="button" style="width:30% ;margin-left:10px;margin-bottom:20px" id="buy" class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#modalbuyproduct">
-        Mua
-        </button>
-            </div>
-          </div>
+          
           <div id="product-infor" class="card" style="width: 15rem;height:26rem">
             <a href="product-detail.html"> <img class="card-img-top" src="images/product/dochoi/dc5.jpg" alt="Card image cap"></a>
             <div class="card-body">
@@ -170,15 +161,15 @@
               <h5 id="name-product" class="card-title">Chuông huấn luyện chó mèo</h5>
               <p class="card-text text-danger">250.000đ</p>
               <!-- Button trigger modal -->
-      <button type="button" style="width:30% ;margin-left:10px;margin-bottom:20px" id="buy" class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#modalbuyproduct">
-        Mua
-        </button>
-            </div>
+              <button type="button" style="width:30% ;margin-left:10px;margin-bottom:20px" id="buy" class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#modalbuyproduct">
+                Mua
+              </button>
+              </div>
           </div>
-          <div id="product-infor" class="card" style="width: 15rem;height:26rem;margin-top:20px">
+          <div id="product-infor" class="card" style="width: 15rem;height:26rem;">
             <a href="product-detail.html"> <img class="card-img-top" src="images/product/dochoi/dc8.webp" alt="Card image cap"></a>
             <div class="card-body">
-              <h5 id="name-product" class="card-title">Dép cho chó mèo</h5>
+              <h5 id="name-product" class="card-title">Dép bông cho chó mèo</h5>
               <p class="card-text text-danger">250.000đ</p>
               <!-- Button trigger modal -->
       <button type="button" style="width:30% ;margin-left:10px;margin-bottom:20px" id="buy" class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#modalbuyproduct">
@@ -251,7 +242,7 @@
 </div>
 </div>
     <!--footer-->
-    <div class="container-fluid d-flex justify-content-around mt-5" style="background-color: #331E0C;height:200px">
+    <div class="container-fluid d-flex justify-content-around mt-5 bg-dark" >
         <div class="footer1 d-flex align-items-center flex-column p-3">
                 <h1 class="mb-3 mt-4  text-capitalize"style="color:#F7A98F">PetCare</h1>
                 <p class="text-white">Giờ hoạt động: 8AM-10PM</p>
