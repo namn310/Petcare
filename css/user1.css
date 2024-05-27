@@ -5,6 +5,9 @@
     font-size:medium;
     
 }
+.noBorder{
+    border: none;
+}
 .menu a{
     text-decoration: none;
     color:white;
