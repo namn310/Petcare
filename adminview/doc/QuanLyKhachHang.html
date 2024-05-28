@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Danh sách đơn hàng | Quản trị Admin</title>
+  <title>Danh sách nhân viên | Quản trị Admin</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,7 +47,7 @@
       </div>
     </div>
     <hr>
-   <ul class="app-menu">
+    <ul class="app-menu">
       <li><a class="app-menu__item haha" href="phan-mem-ban-hang.html"><i class='app-menu__icon bx bx-cart-alt'></i>
           <span class="app-menu__label">POS Bán Hàng</span></a></li>
       <li><a class="app-menu__item" href="index.html"><i class='app-menu__icon bx bx-tachometer'></i><span
@@ -71,110 +71,147 @@
       </li>
     </ul>
   </aside>
-    <main class="app-content">
-      <div class="app-title">
-        <ul class="app-breadcrumb breadcrumb side">
-          <li class="breadcrumb-item active"><a href="#"><b>Quản lý nội bộ</b></a></li>
-        </ul>
-        <div id="clock"></div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="tile">
-            <div class="tile-body">
-              <div class="row element-button">
-                <div class="col-sm-2">
-  
-                  <a class="btn btn-add btn-sm" href="form-add-bi-cam.html" title="Thêm"><i class="fas fa-plus"></i>
-                    Tạo mới</a>
-                </div>
-                <div class="col-sm-2">
-                  <a class="btn btn-delete btn-sm nhap-tu-file" type="button" title="Nhập" onclick="myFunction(this)"><i
-                      class="fas fa-file-upload"></i> Tải từ file</a>
-                </div>
-  
-                <div class="col-sm-2">
-                  <a class="btn btn-delete btn-sm print-file" type="button" title="In" onclick="myApp.printTable()"><i
-                      class="fas fa-print"></i> In dữ liệu</a>
-                </div>
-                <div class="col-sm-2">
-                  <a class="btn btn-delete btn-sm print-file js-textareacopybtn" type="button" title="Sao chép"><i
-                      class="fas fa-copy"></i> Sao chép</a>
-                </div>
-  
-                <div class="col-sm-2">
-                  <a class="btn btn-excel btn-sm" href="" title="In"><i class="fas fa-file-excel"></i> Xuất Excel</a>
-                </div>
-                <div class="col-sm-2">
-                  <a class="btn btn-delete btn-sm pdf-file" type="button" title="In" onclick="myFunction(this)"><i
-                      class="fas fa-file-pdf"></i> Xuất PDF</a>
-                </div>
-                <div class="col-sm-2">
-                  <a class="btn btn-delete btn-sm" type="button" title="Xóa" onclick="myFunction(this)"><i
-                      class="fas fa-trash-alt"></i> Xóa tất cả </a>
-                </div>
+  <main class="app-content">
+    <div class="app-title">
+      <ul class="app-breadcrumb breadcrumb side">
+        <li class="breadcrumb-item active"><a href="#"><b>Danh sách khách hàng</b></a></li>
+      </ul>
+      <div id="clock"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tile">
+          <div class="tile-body">
+
+            <div class="row element-button">
+             
+              <div class="col-sm-2">
+                <a id="uploadfile" class="btn btn-delete btn-sm nhap-tu-file" type="button" title="Nhập" onclick="myFunction(this)"><i
+                    class="fas fa-file-upload"></i>> Tải từ file</a>
               </div>
-              <table class="table table-hover table-bordered" id="sampleTable">
-                <thead>
-                  <tr>
-                    <th width="10"><input type="checkbox" id="all"></th>
-                    <th>Họ và Tên</th>
-                    <th>Ngày sinh</th>
-                    <th>Chức vụ</th>
-                    <th>Lý do cấm</th>
-                    <th>Tình trạng</th>
-                    <th>Chức năng</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td width="10"><input type="checkbox" name="check1" value="1"></td>
-                    <td>Kiều Thái Anh</td>
-                    <td>10/09/1998</td>
-                    <td>Thu Ngân</td>
-                    <td>Gian lận trong công việc đã lấy trộm tiền của công ty và thái độ không ăn năn hối lỗi</td>
-                    <td><span class="badge bg-danger">Sa thải</span></td>
-                    <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>
-                  </tr>
-                  <tr>
-                    <td width="10"><input type="checkbox" name="check1" value="1"></td>
-                    <td>Nguyễn Thị Kim Yến</td>
-                    <td>02/12/1999</td>
-                    <td>Thu Ngân</td>
-                    <td>Gian lận trong công việc đã lấy trộm tiền của công ty và thái độ không ăn năn hối lỗi</td>
-                    <td><span class="badge bg-danger">Sa thải</span></td>
-                    <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>
-                  </tr>
-                  <tr>
-                    <td width="10"><input type="checkbox" name="check1" value="1"></td>
-                    <td>Nguyễn Hoàng Thái Nhật</td>                
-                    <td>07/02/1996</td>
-                    <td>Quản kho</td>
-                    <td>Tự ý thay đổi thông tin nhân viên và không báo cáo quản lý</td>
-                    <td><span class="badge bg-warning">Khóa tài khoản</span></td>
-                    <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>
-                  </tr>
-                  <tr>
-                    <td width="10"><input type="checkbox" name="check1" value="1"></td>
-                    <td>Võ Thành Nam</td>
-                    <td>19/09/1999</td>
-                    <td>Dịch vụ</td>
-                    <td>Phá hỏng 9 sản phẩm của công ty, có kháng cự khi bị bắt (bồi thường 125.000.000 đ)</td>
-                    <td><span class="badge bg-danger">Sa thải</span></td>
-                    <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i></button>
-                      <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>
-                  </tr>
-                </tbody>
-              </table>
+
+              <div class="col-sm-2">
+                <a class="btn btn-delete btn-sm print-file" type="button" title="In" onclick="myApp.printTable()"><i
+                    class="fas fa-print"></i> In dữ liệu</a>
+              </div>
+              <div class="col-sm-2">
+                <a class="btn btn-delete btn-sm print-file js-textareacopybtn" type="button" title="Sao chép"><i
+                    class="fas fa-copy"></i> Sao chép</a>
+              </div>
+
+              <div class="col-sm-2">
+                <a class="btn btn-excel btn-sm" href="" title="In"><i class="fas fa-file-excel"></i> Xuất Excel</a>
+              </div>
+              <div class="col-sm-2">
+                <a class="btn btn-delete btn-sm pdf-file" type="button" title="In" onclick="myFunction(this)"><i
+                    class="fas fa-file-pdf"></i> Xuất PDF</a>
+              </div>
+              
             </div>
+            <table class="table table-hover table-bordered js-copytextarea" cellpadding="0" cellspacing="0" border="0"
+              id="sampleTable">
+              <thead>
+                <tr>
+                  <th width="10"><input type="checkbox" id="all"></th>
+                  <th>ID khách hàng</th>
+                  <th width="150">Họ và tên</th>
+                  <th width="300">Địa chỉ</th>
+                  <th>Ngày sinh</th>
+                  <th>Giới tính</th>
+                  <th>SĐT</th>
+                  <th>Gmail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="10"><input type="checkbox" name="check1" value="1"></td>
+                  <td>#CD12837</td>
+                  <td>Hồ Thị Thanh Ngân</td>
+                  <td>155-157 Trần Quốc Thảo, Quận 3, Hồ Chí Minh </td>
+                  <td>12/02/1999</td>
+                  <td>Nữ</td>
+                  <td>0926737168</td>
+                  <td>ngandd1234@gmail.com</td>
+
+                </tr>
+                <tr>
+                  <td width="10"><input type="checkbox" name="check2" value="2"></td>
+                  <td>#SX22837</td>
+                  <td>Trần Khả Ái</td>
+                  <td>6 Nguyễn Lương Bằng, Tân Phú, Quận 7, Hồ Chí Minh</td>
+                  <td>22/12/1999</td>
+                  <td>Nữ</td>
+                  <td>0931342432</td>
+                  <td>ainthh1@gmail.com</td>
+
+                </tr>
+                <tr>
+                  <td width="10"><input type="checkbox" name="check3" value="3"></td>
+                  <td>#LO2871</td>
+                  <td>Phạm Thu Cúc</td>
+                  <td>Số 3 Hòa Bình, Phường 3, Quận 11, Hồ Chí Minh </td>
+                  <td>02/06/1998</td>
+                  <td>Nữ</td>
+                  <td>0931491997</td>
+                  <td>cucyjg123@gmail.com</td>
+
+                </tr>
+                <tr>
+                  <td width="10"><input type="checkbox"></td>
+                  <td>#SR28746</td>
+                  <td>Trần Anh Khoa</td>
+                  <td>19 Đường Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Hồ Chí Minh </td>
+                  <td>18/02/1995</td>
+                  <td>Nam</td>
+                  <td>0916706633</td>
+                  <td>khoa343@gmail.com</td>
+
+                </tr>
+                <tr>
+                  <td width="10"><input type="checkbox"></td>
+                  <td>#KJS276</td>
+                  <td>Nguyễn Thành Nhân</td>
+                  <td>Số 13, Tân Thuận Đông, Quận 7, Hồ Chí Minh </td>
+                  <td>10/03/1996</td>
+                  <td>Nam</td>
+                  <td>0971038066</td>
+                  <td>nhanasfd1@gmail.com</td>
+
+                </tr>
+                <tr>
+                  <td width="10"><input type="checkbox"></td>
+                  <td>#BS76228</td>
+                  <td>Nguyễn Đặng Trọng Nhân</td>
+                  <td>59C Nguyễn Đình Chiểu, Quận 3, Hồ Chí Minh </td>
+                  <td>23/07/1996</td>
+                  <td>Nam</td>
+                  <td>0846881155</td>
+                  <td>nhanaal12@gmail.com</td>
+
+                </tr>
+                <tr>
+                  <td width="10"><input type="checkbox"></td>
+                  <td>#YUI21376</td>
+                  <td>Nguyễn Thị Mai</td>
+                  <td>Đường Số 3, Tân Tạo A, Bình Tân, Hồ Chí Minh</td>
+                  <td>09/12/2000</td>
+                  <td>Nữ </td>
+                  <td>0836333037</td>
+                  <td>mai1234@gmail.com</td>
+                </tr>
+
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
-    </main>
-   <!-- Essential javascripts for application to work-->
+    </div>
+  </main>
+
+  
+
+  <!-- Essential javascripts for application to work-->
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -199,7 +236,7 @@
         swal({
           title: "Cảnh báo",
          
-          text: "Bạn có chắc chắn là muốn xóa?",
+          text: "Bạn có chắc chắn là muốn xóa nhân viên này?",
           buttons: ["Hủy bỏ", "Đồng ý"],
         })
           .then((willDelete) => {
@@ -302,5 +339,6 @@
       $("#ModalUP").modal({ backdrop: false, keyboard: false })
     });
   </script>
-  </body>
+</body>
+
 </html>
