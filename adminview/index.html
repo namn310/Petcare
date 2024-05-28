@@ -60,20 +60,27 @@
                     </form>
                         <!--=====LINK TÌM MẬT KHẨU======-->
                         <div class="text-right p-t-12">
-                            <a class="txt2" href="forgot.html">
+                            <a class="txt2" href="/adminview/forgot.html">
                                 Bạn quên mật khẩu?
                             </a>
                         </div>
                     
                     <!--=====FOOTER======-->
-                    <div class="text-center p-t-70 txt2">
-                        Phần mềm quản lý bán hàng <i class="far fa-copyright" aria-hidden="true"></i>
-                        <script type="text/javascript">document.write(new Date().getFullYear());</script> 
-                    </div> 
+                    
                 
             </div>
         </div>
     </div>
+    </div>
+    
+    <style>
+        .error{
+            border:solid red 1px;
+        }
+        .correct{
+            border: solid green 1px;
+        }
+    </style>
     <!--Javascript-->
     <script src="/js/main.js"></script>
     <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
@@ -82,6 +89,22 @@
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="vendor/select2/select2.min.js"></script>
     <script type="text/javascript">
+        
+    $(document).ready(function(){
+        $("#email").click(function(){
+        var correct_email=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        var email= $("#email").val();
+        var password = $("#password").val();
+        if(correct_email.test(email)==false){
+            $("#email").addClass(".error");
+        }
+        else{
+            $("#email").remove(".error");
+            $("#email").addClass(".correct");
+
+        }
+    })
+})
         /*
          $("#loginForm").submit(function(event){
         event.preventDefault(); 
