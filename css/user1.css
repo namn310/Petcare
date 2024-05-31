@@ -200,3 +200,77 @@ input{
         visibility: visible;
     }
 }
+/* cart css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.product-inner-box .icons{
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: -4px;
+    top: -3%;
+    transition: all 0.2s ease-in-out, tranform 0.2s ease-in-out, opacity 0.2s ease-in-out ;
+    opacity: 0;
+}
+.product-inner-box .icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.product-inner-box .onsale .badge{
+    background-color: red;
+    font-size: 12px;
+    padding: 5px 14px;
+    top: 0;
+    position: absolute;
+}
+.product-inner-box .onsale .badge::before{
+    border-width:10px 0px 0px 10px ;
+    border-color: transparent transparent transparent #000;
+    content: "";
+    position: absolute;
+    right: -8px;
+    width: 0;
+    bottom: 0;
+    border-style: solid;
+}
+.product-inner-box .onsale .badge::after{
+    border-width: 10px 8px 0px 10px ;
+    border-color:red transparent transparent transparent ;
+    content: "";
+    position: absolute;
+    right: -8px;
+    width: 0;
+    top: 0;
+    border-style: solid;
+}
+.product-inner-box img{
+    box-shadow: 0 33px 61px -29px rgb(0 0 0 / 26%);
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+.product-box.is-hover .icons{
+    transform: rotateY(-3%);
+    top:  3%;
+    opacity: 1;
+}
+.cart-btn{
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.2s ease-in-out, tranform 0.2s ease-in-out, opacity 0.2s ease-in-out ;
+}
+.product-box.is-hover .cart-btn{
+    opacity: 1;
+}
+.product-name h3{
+    font-size: 16px;
+    font-weight: 400;
+}

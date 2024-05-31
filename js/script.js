@@ -277,7 +277,16 @@ function sendContactForm(){
     
 }
 
-
+// cart hover
+var cards = document.querySelectorAll('.product-box');
+[...cards].forEach((cards) => {
+    cards.addEventListener('mouseover', function(){
+        cards.classList.add('is-hover');
+    })
+    cards.addEventListener('mouseleave', function(){
+        cards.classList.remove('is-hover');
+    })
+})
 
 
 
