@@ -130,3 +130,7 @@ Cart.css
 .cart thead {
   background-color: gray;
 }
+.toggle-pro{
+  display:none;
+}
+
